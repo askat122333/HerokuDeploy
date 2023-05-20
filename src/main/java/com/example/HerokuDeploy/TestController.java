@@ -18,6 +18,6 @@ public class TestController {
     }
     @PostMapping("/*")
     public Integer mult (@RequestParam int a, @RequestParam int b) {
-        return a + b ;
+        return a * b ;
     }
 }
