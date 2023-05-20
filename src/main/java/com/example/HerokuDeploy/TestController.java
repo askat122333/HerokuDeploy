@@ -1,9 +1,6 @@
 package com.example.HerokuDeploy;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class TestController {
@@ -17,6 +14,10 @@ public class TestController {
     }
     @GetMapping("/+/{a}/{b}")
     public Integer sum (@PathVariable int a,@PathVariable int b) {
+        return a + b ;
+    }
+    @PostMapping("/*")
+    public Integer mult (@RequestParam int a, @RequestParam int b) {
         return a + b ;
     }
 }
