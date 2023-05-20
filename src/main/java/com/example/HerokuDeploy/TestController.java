@@ -9,4 +9,8 @@ public class TestController {
     public String getWord(){
         return "Heroku test";
     }
+    @GetMapping("/2")
+    public String getWord2(){
+        return "Heroku test 2";
+    }
 }
