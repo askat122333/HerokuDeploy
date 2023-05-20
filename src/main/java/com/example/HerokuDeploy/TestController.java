@@ -15,7 +15,7 @@ public class TestController {
     public String getWord2(){
         return "Heroku test 2";
     }
-    @GetMapping("/+")
+    @GetMapping("/+/{a}/{b}")
     public Integer sum (@PathVariable int a,@PathVariable int b) {
         return a + b ;
     }
